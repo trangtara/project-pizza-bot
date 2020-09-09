@@ -6,7 +6,7 @@ const pizzaPrice = 80
 
 //Put your Javscript code here:
 
-alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
+//alert(`Hey! Happy to serve your pizza. On our menu we have ${vegetarian}, ${hawaiian} and ${pepperoni}`);
 
 const validateOrderName = (orderName) => {
   return orderName === 'vegetarian' || orderName === 'pepperoni' || orderName === 'hawaiian';
@@ -45,7 +45,7 @@ const startOrder = () => {
 }
 
 
-startOrder();
+//startOrder();
 
 
 
