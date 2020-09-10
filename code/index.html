@@ -10,16 +10,87 @@
   </head>
   <body>
     <h1>This is your Pizza Bot</h1>
-    <div class='wrap'>
-      <form class='form'>
-        <label for='name'>Can we have your name please?</label>
-        <input type=text name='name' id='name' value='name'>
-      </form>
+    <div class="wrap">
+      <p class="greeting">Hey! Welcome to EmeTa pizza!.</p>
+      
+      <form class="form">
+        <div class= "askForName">
+          <label for="name">Can we have your name please?</label><br>
+          <input type="text"name="name" id="name" value="name" />
+          <button onlick="startOrder()" type="button">Next</button>
+        </div>
+        <div class="selectPizza">
+          <label>Hey name() please select your pizza?</label>
+          <div class="pizzaType">
+            <button 
+              type="button"
+              onclick="selectType('Hawaiian')"
+            >
+              <img src="./assets/hawaiian.png" class="hawaiianImage" height="200" />
+              Hawaiian
+              <p>80kr</p>
+            </button>
 
+            <button 
+              type="button" 
+              onclick="selectType('Vegetarian')"
+            >
+                <img src="./assets/Vegetarian.png" class="pizzaTypeImg" />
+                Vegetarian
+                <p>80kr</p>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="selectType('Pepperoni')"
+            >
+              <img src="assets/Pepperoni.png" class="pizzaTypeImg" />
+              Pepperoni
+              <p>80kr</p>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="selectType('Magarita')"
+            >
+             <img src="assets/magarita.png" class="pizzaTypeImg" /> 
+              Magarita
+              <p>65kr</p>
+            </button>
+
+            <button 
+              type="button" 
+              onclick="selectType('Fusion')"
+            >
+              <img src="assets/fusion.png" class="pizzaTypeImg" />
+              Fusion
+              <p>120kr</p>
+            </button>
+            
+            <button 
+              type="button" 
+              onclick="selectType('Kebab')"
+            >
+              <img src="./assets/kebab.png" class="kebabImage" height="200" />  
+              Kebab
+              <p>85kr</p>
+            </button>
+          
+          </div>
+        </div>
+        <div class="Quantity">
+          <label>How many [type] do you want?</label>
+          <input type="number" name="quantity" id="quantity"/>
+          <button type="button">Next</button>
+        </div>  
+        <p class="completeMessage" id="complete">
+          Great, I'll get started on your ${orderName} right away, it will cost ${calculateTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.
+        </p>
+
+      </form>
 
     </div>
 
-    <p id="complete"></p>
     <script src="./pizzabot.js"></script>
   </body>
 </html>
