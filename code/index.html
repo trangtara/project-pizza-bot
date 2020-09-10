@@ -21,7 +21,7 @@
         </div>
         <div class="selectPizza step-2">
           <label class="label">Hey <span id="userName"></span> please select your pizza!</label>
-          <div class="pizzaType">
+          <div class="pizzaType" id="menu">
             <button 
               type="button"
               onclick="selectType('Hawaiian')"
@@ -79,12 +79,12 @@
           </div>
         </div>
         <div class="Quantity step-3">
-          <label class="label">How many <span id="pizzaName"> pizza </span> do you want?</label>
+          <label class="label">How many <span class="pizzaName"> pizza </span> do you want?</label>
           <input type="number" name="quantity" id="quantity"/>
           <button onclick="goToStep4()" type="button">Finish</button>
         </div>  
         <p class="completeMessage step-4" id="complete">
-          Great! You have orderd <span id="orderQuantity"></span> <span id="orderName"></span>
+          Great! You have orderd <span id="orderQuantity"></span> <span class="pizzaName"></span>
           I'll get started on your order right away, it will cost <span id="totalCost"></span> kr. The pizza(s) will take <span id="cookingTime"></span> minutes.
         </p>
 
