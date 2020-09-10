@@ -65,7 +65,7 @@ h1 {
   font: 18px;
   font-weight: bold;
 }
-
+/* all: unset is to remove all default styling of the button */
 .selectPizza button {
   all: unset;
   background-color: #e5e5e5;
