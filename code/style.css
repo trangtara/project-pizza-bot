@@ -19,7 +19,7 @@ h1 {
   padding: 15px;
   text-align: center;
   background-color: #f7ede2;
-  margin: 15px;
+  
 }
 
 .form {
@@ -107,7 +107,6 @@ form.is-step-4 .step-1 button {
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #00509d;
-  border-radius: 20px;
   background-color: #84a59d;
 }
 
@@ -115,7 +114,6 @@ form.is-step-4 .step-1 button {
   color: white;
 }
 .orderImage {
-  height: 200px;
   width: 30%;
 }
 
