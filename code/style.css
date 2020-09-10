@@ -50,9 +50,19 @@ h1 {
   flex-direction: column;
 }
 
+.price {
+  font: 18px;
+  font-weight: bold;
+}
+
+.selectPizza button {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+}
 .pizzaType {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -68,7 +78,7 @@ h1 {
 
 .pizzaTypeImg {
   width: 80%;
-  height: 200px;
+  height: auto;
 }
 
 form.is-step-1 .step-2,
@@ -99,6 +109,10 @@ form.is-step-4 .step-1 button {
   border: 1px solid #00509d;
   border-radius: 20px;
   background-color: #84a59d;
+}
+
+.completeMessage {
+  color: white;
 }
 .orderImage {
   height: 200px;

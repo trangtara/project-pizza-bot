@@ -20,15 +20,15 @@
           <button onclick="gotoStep2()" type="button">Next</button>
         </div>
         <div class="selectPizza step-2">
-          <label class="label">Hey <span id="userName"></span> please select your pizza!</label>
+          <label class="label">Hey <span id="userName"></span>! Please select your pizza!</label>
           <div class="pizzaType" id="menu">
             <button 
               type="button"
               onclick="selectType('Hawaiian', './assets/hawaiian.png')"
             >
-              <img src="./assets/hawaiian.png" class="hawaiianImage" height="200" />
+              <img src="./assets/hawaiian.png" class="pizzaTypeImg" />
               Hawaiian
-              <p>80kr</p>
+              <p class="price">80kr</p>
             </button>
 
             <button 
@@ -37,7 +37,7 @@
             >
                 <img src="./assets/Vegetarian.png" class="pizzaTypeImg" />
                 Vegetarian
-                <p>80kr</p>
+                <p class="price">80kr</p>
             </button>
 
             <button 
@@ -46,16 +46,16 @@
             >
               <img src="./assets/Pepperoni.png" class="pizzaTypeImg" />
               Pepperoni
-              <p>80kr</p>
+              <p class="price">80kr</p>
             </button>
 
             <button 
               type="button" 
-              onclick="selectType('margarita')"
+              onclick="selectType('margarita', './assets/margarita.png')"
             >
              <img src="./assets/margarita.png" class="pizzaTypeImg" /> 
               margarita
-              <p>65kr</p>
+              <p class="price">65kr</p>
             </button>
 
             <button 
@@ -64,22 +64,22 @@
             >
               <img src="./assets/fusion.png" class="pizzaTypeImg" />
               Fusion
-              <p>120kr</p>
+              <p class="price">120kr</p>
             </button>
             
             <button 
               type="button" 
               onclick="selectType('Kebab', './assets/kebab.png')"
             >
-              <img src="./assets/kebab.png" class="kebabImage" height="200" />  
+              <img src="./assets/kebab.png" class="pizzaTypeImg" />  
               Kebab
-              <p>85kr</p>
+              <p class="price">85kr</p>
             </button>
           
           </div>
         </div>
         <div class="Quantity step-3">
-          <label class="label">How many <span class="pizzaName"> pizza </span> do you want?</label>
+          <label class="label">How many <span class="pizzaName"></span> pizzas do you want?</label>
           <input type="number" name="quantity" id="quantity"/>
           <button onclick="goToStep4()" type="button">Finish</button>
         </div>
