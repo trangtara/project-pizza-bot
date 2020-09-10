@@ -18,13 +18,12 @@ const selectType = (pizza, imgsrc) => {
   document.querySelector('.form').classList.add('is-step-3');
   selectedPizza = pizza;
   
-  document.querySelectorAll('.pizzaName').forEach((el) => {
-    el.innerHTML = pizza;
+  document.querySelectorAll('.pizzaName').forEach((element) => {
+    element.innerHTML = pizza;
   });
 
 
   document.getElementById('orderImage').setAttribute('src', imgsrc);
-  console.log(imgsrc)
 }
 
 const calculateCookingTime = (orderQuantity) => {
@@ -38,19 +37,15 @@ const calculateCookingTime = (orderQuantity) => {
 }
 
 const totalCost = (orderQuantity) => {
-  let cost;
-  
   if (selectedPizza === 'Vegetarian' || selectedPizza === 'Hawaiian' || selectedPizza === 'Pepperoni') {
-    cost = orderQuantity * 80
+   return orderQuantity * 80
   } else if (selectedPizza === 'Margarita') {
-    cost = orderQuantity * 65
+    return orderQuantity * 65
   } else if (selectedPizza === 'Fusion') {
-    cost = orderQuantity * 120
+    return orderQuantity * 120
   } else {
-    cost = orderQuantity * 85
+    return orderQuantity * 85
   }
-  
-  return cost;
 }
 
 const goToStep4 = () => {
@@ -59,10 +54,10 @@ const goToStep4 = () => {
 
   const orderQuantity = document.getElementById('quantity').value;
   const cookingTime = calculateCookingTime(orderQuantity);
-  const cost = totalCost(orderQuantity);
+  const total = totalCost(orderQuantity);
   
   document.getElementById('orderQuantity').innerHTML = orderQuantity;
-  document.getElementById('totalCost').innerHTML = cost;
+  document.getElementById('totalCost').innerHTML = total;
   document.getElementById('cookingTime').innerHTML = cookingTime;
 }
 
