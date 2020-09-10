@@ -67,8 +67,6 @@ h1 {
 }
 
 .selectPizza button {
-  all: unset;
-  background-color: #ffffff;
   cursor: pointer;
   font-size: 18px;
   padding: 10px;
