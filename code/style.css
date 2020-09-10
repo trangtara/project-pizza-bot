@@ -5,12 +5,44 @@ font-family: 'Raleway', sans-serif;
 
 h1 {
   text-align: center;
-  color: blue;
+  background-color: #283618;
+  color: #fefae0;
+  padding: 15px;
+  width: 100%;
 }
 
+.greeting {
+  font-size: 22px;
+}
+
+.wrap {
+  padding: 15px;
+  text-align: center;
+  background-color: #fefae0;
+  margin: 15px;
+}
+
+.form {
+  font-size: 18px;
+  background-color: #606c38;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+.label{
+  padding: 15px;
+  margin: 15px;
+  color: white;
+}
+
+.nameInput{
+  margin: 15px;
+}
 .askForName {
   margin-top: 10px;
   margin-bottom: 10px;
+ 
 }
 
 .selectPizza {
@@ -62,10 +94,4 @@ form.is-step-2 .step-4 {
 }
 
 
-.form {
-  font-size: 12px;
-}
 
-.form.is-step-1 {
-  font-size: 12px;
-}
