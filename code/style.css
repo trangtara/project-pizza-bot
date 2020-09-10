@@ -36,6 +36,12 @@ h1 {
   color: #00509d;
 }
 
+@media screen and (max-width:400px){
+  .label {
+    margin: 5px;
+  }
+}
+
 .nameInput{
   margin: 15px;
 }
@@ -67,6 +73,17 @@ h1 {
   margin-bottom: 15px;
 }
 
+@media screen and (max-width:700px){
+  .pizzaType {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:400px){
+  .pizzaType {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .pizzaType > button {
   align-items: center;
   display: flex;
