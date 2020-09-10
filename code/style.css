@@ -39,4 +39,33 @@ h1 {
   height: 200px;
 }
 
+form.is-step-1 .step-2,
+form.is-step-1 .step-3,
+form.is-step-1 .step-4 {
+  display: none;
+}
 
+form.is-step-2 .step-1 button,
+form.is-step-2 .step-3,
+form.is-step-2 .step-4 {
+  display: none;
+}
+
+.is-step-3 .step-4,
+.is-step-3 .step-1 button {
+  display: none;
+}
+
+.is-step-4 .step-3 button,
+.is-step-4 .step-1 button {
+  display: none;
+}
+
+
+.form {
+  font-size: 12px;
+}
+
+.form.is-step-1 {
+  font-size: 12px;
+}

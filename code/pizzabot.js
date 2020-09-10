@@ -4,9 +4,37 @@ const pepperoni = "Pepperoni Pizza"
 
 const pizzaPrice = 80
 
-const name = () => {
-document.getElementById('name').value
+
+
+const gotoStep2 = () => {
+  document.querySelector('.form').classList.remove('is-step-1');
+  document.querySelector('.form').classList.add('is-step-2');
+
+  const name = document.getElementById('name').value;
+
+  document.getElementById('userName').innerHTML = name;
 }
+
+const selectType = (pizza) => {
+  document.querySelector('.form').classList.remove('is-step-2');
+  document.querySelector('.form').classList.add('is-step-3');
+  document.getElementById('pizzaName').innerHTML = pizza;
+}
+
+
+
+const goToStep4 = () => {
+  document.querySelector('.form').classList.remove('is-step-3');
+  document.querySelector('.form').classList.add('is-step-4');
+  
+  document.getElementById('orderName').innerHTML = '[name]';
+  document.getElementById('totalCost').innerHTML = '[cost]';
+  document.getElementById('cookingTime').innerHTML = '[time]';
+
+}
+
+
+
 
 
 const validateOrderName = (orderName) => {
@@ -46,7 +74,7 @@ const startOrder = () => {
 }
 
 
-startOrder();
+// startOrder();
 
 
 

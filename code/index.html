@@ -13,14 +13,14 @@
     <div class="wrap">
       <p class="greeting">Hey! Welcome to EmeTa pizza!.</p>
       
-      <form class="form">
-        <div class= "askForName">
+      <form class="form is-step-1">
+        <div class="askForName step-1">
           <label for="name">Can we have your name please?</label><br>
-          <input type="text"name="name" id="name" value="name" />
-          <button onlick="startOrder()" type="button">Next</button>
+          <input type="text"name="name" id="name" value="" />
+          <button onclick="gotoStep2()" type="button">Next</button>
         </div>
-        <div class="selectPizza">
-          <label>Hey name() please select your pizza?</label>
+        <div class="selectPizza step-2">
+          <label>Hey <span id="userName"></span> please select your pizza!</label>
           <div class="pizzaType">
             <button 
               type="button"
@@ -78,13 +78,13 @@
           
           </div>
         </div>
-        <div class="Quantity">
-          <label>How many [type] do you want?</label>
+        <div class="Quantity step-3">
+          <label>How many <span id="pizzaName"></span> do you want?</label>
           <input type="number" name="quantity" id="quantity"/>
-          <button type="button">Next</button>
+          <button onclick="goToStep4()" type="button">Finish</button>
         </div>  
-        <p class="completeMessage" id="complete">
-          Great, I'll get started on your ${orderName} right away, it will cost ${calculateTotalCost(orderQuantity, pizzaPrice)} kr. The pizza(s) will take ${calculateCookingTime(orderQuantity)} minutes.
+        <p class="completeMessage step-4" id="complete">
+          Great, I'll get started on your <span id="orderName"></span> right away, it will cost <span id="totalCost"></span> kr. The pizza(s) will take <span id="cookingTime"></span> minutes.
         </p>
 
       </form>
