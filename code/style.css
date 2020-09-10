@@ -5,7 +5,7 @@ font-family: 'Raleway', sans-serif;
 
 h1 {
   text-align: center;
-  background-color: #283618;
+  background-color: #84a59d;
   color: #fefae0;
   padding: 15px;
   width: 100%;
@@ -18,13 +18,13 @@ h1 {
 .wrap {
   padding: 15px;
   text-align: center;
-  background-color: #fefae0;
+  background-color: #f7ede2;
   margin: 15px;
 }
 
 .form {
   font-size: 18px;
-  background-color: #606c38;
+  background-color: #f6bd60;
   padding-bottom: 15px;
   padding-top: 15px;
   margin-bottom: 30px;
@@ -33,7 +33,7 @@ h1 {
 .label{
   padding: 15px;
   margin: 15px;
-  color: white;
+  color: #00509d;
 }
 
 .nameInput{
@@ -73,25 +73,36 @@ h1 {
 
 form.is-step-1 .step-2,
 form.is-step-1 .step-3,
-form.is-step-1 .step-4 {
+form.is-step-1 .orderComplete {
   display: none;
 }
 
 form.is-step-2 .step-1 button,
 form.is-step-2 .step-3,
-form.is-step-2 .step-4 {
+form.is-step-2 .orderComplete {
   display: none;
 }
 
-.is-step-3 .step-4,
-.is-step-3 .step-1 button {
+form.is-step-3 .step-1 button,
+form.is-step-3 .orderComplete {
   display: none;
 }
 
-.is-step-4 .step-3 button,
-.is-step-4 .step-1 button {
+form.is-step-4 .step-3 button,
+form.is-step-4 .step-1 button {
   display: none;
 }
 
+.orderComplete{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #00509d;
+  border-radius: 20px;
+  background-color: #84a59d;
+}
+.orderImage {
+  height: 200px;
+  width: 30%;
+}
 
 

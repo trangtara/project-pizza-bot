@@ -24,7 +24,7 @@
           <div class="pizzaType" id="menu">
             <button 
               type="button"
-              onclick="selectType('Hawaiian')"
+              onclick="selectType('Hawaiian', './assets/hawaiian.png')"
             >
               <img src="./assets/hawaiian.png" class="hawaiianImage" height="200" />
               Hawaiian
@@ -33,7 +33,7 @@
 
             <button 
               type="button" 
-              onclick="selectType('Vegetarian')"
+              onclick="selectType('Vegetarian', './assets/Vegetarian.png')"
             >
                 <img src="./assets/Vegetarian.png" class="pizzaTypeImg" />
                 Vegetarian
@@ -42,34 +42,34 @@
 
             <button 
               type="button" 
-              onclick="selectType('Pepperoni')"
+              onclick="selectType('Pepperoni', './assets/Pepperoni.png')"
             >
-              <img src="assets/Pepperoni.png" class="pizzaTypeImg" />
+              <img src="./assets/Pepperoni.png" class="pizzaTypeImg" />
               Pepperoni
               <p>80kr</p>
             </button>
 
             <button 
               type="button" 
-              onclick="selectType('Magarita')"
+              onclick="selectType('margarita')"
             >
-             <img src="assets/magarita.png" class="pizzaTypeImg" /> 
-              Magarita
+             <img src="./assets/margarita.png" class="pizzaTypeImg" /> 
+              margarita
               <p>65kr</p>
             </button>
 
             <button 
               type="button" 
-              onclick="selectType('Fusion')"
+              onclick="selectType('Fusion', './assets/fusion.png')"
             >
-              <img src="assets/fusion.png" class="pizzaTypeImg" />
+              <img src="./assets/fusion.png" class="pizzaTypeImg" />
               Fusion
               <p>120kr</p>
             </button>
             
             <button 
               type="button" 
-              onclick="selectType('Kebab')"
+              onclick="selectType('Kebab', './assets/kebab.png')"
             >
               <img src="./assets/kebab.png" class="kebabImage" height="200" />  
               Kebab
@@ -82,13 +82,16 @@
           <label class="label">How many <span class="pizzaName"> pizza </span> do you want?</label>
           <input type="number" name="quantity" id="quantity"/>
           <button onclick="goToStep4()" type="button">Finish</button>
-        </div>  
-        <p class="completeMessage step-4" id="complete">
-          Great! You have orderd <span id="orderQuantity"></span> <span class="pizzaName"></span>
-          I'll get started on your order right away, it will cost <span id="totalCost"></span> kr. The pizza(s) will take <span id="cookingTime"></span> minutes.
-        </p>
-
+        </div>
+        <div class="orderComplete">
+          <img class="orderImage" src="" alt="" id="orderImage" />
+          <p class="completeMessage" id="complete">
+            Great! You have orderd <span id="orderQuantity"></span> <span class="pizzaName"></span>
+            I'll get started on your order right away, it will cost <span id="totalCost"></span> kr. The pizza(s) will take <span id="cookingTime"></span> minutes.
+          </p>
+        </div>
       </form>
+      
 
     </div>
 
