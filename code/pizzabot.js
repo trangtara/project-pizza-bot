@@ -1,7 +1,5 @@
-const vegetarian = "Vegetarian Pizza"
-const hawaiian = "Hawaiian Pizza"
-const pepperoni = "Pepperoni Pizza"
 
+// other functions are going to use this variable so it need to be in the global scope
 let selectedPizza;
 
 const gotoStep2 = () => {
@@ -16,13 +14,13 @@ const gotoStep2 = () => {
 const selectType = (pizza, imgsrc) => {
   document.querySelector('.form').classList.remove('is-step-2');
   document.querySelector('.form').classList.add('is-step-3');
+  //this is only "place" that i can get the selected pizza from user input. So, i can assign the value to selectedPizza variable
   selectedPizza = pizza;
   
   document.querySelectorAll('.pizzaName').forEach((element) => {
     element.innerHTML = pizza;
   });
-
-
+  // in 'orderImage' htlm, the src is empty, so I need to add the image source by setAttribute (function), using the image I call from the button
   document.getElementById('orderImage').setAttribute('src', imgsrc);
 }
 
@@ -36,6 +34,7 @@ const calculateCookingTime = (orderQuantity) => {
   }
 }
 
+// function TotalCost needs to return the value to variable (total) that will be used later in the function goToStep4. That's why we need a return statement.
 const totalCost = (orderQuantity) => {
   if (selectedPizza === 'Vegetarian' || selectedPizza === 'Hawaiian' || selectedPizza === 'Pepperoni') {
    return orderQuantity * 80
@@ -51,6 +50,7 @@ const totalCost = (orderQuantity) => {
 const goToStep4 = () => {
   document.querySelector('.form').classList.remove('is-step-3');
   document.querySelector('.form').classList.add('is-step-4');
+  document.querySelector('.orderComplete').classList.add('active');
 
   const orderQuantity = document.getElementById('quantity').value;
   const cookingTime = calculateCookingTime(orderQuantity);

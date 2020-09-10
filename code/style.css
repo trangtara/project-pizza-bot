@@ -81,37 +81,39 @@ h1 {
   height: auto;
 }
 
-form.is-step-1 .step-2,
-form.is-step-1 .step-3,
-form.is-step-1 .orderComplete {
+.is-step-1 .step-2,
+.is-step-1 .step-3 {
   display: none;
 }
 
-form.is-step-2 .step-1 button,
-form.is-step-2 .step-3,
-form.is-step-2 .orderComplete {
+.is-step-2 .step-1 button,
+.is-step-2 .step-3{
   display: none;
 }
 
-form.is-step-3 .step-1 button,
-form.is-step-3 .orderComplete {
+.is-step-3 .step-1 button {
   display: none;
 }
 
-form.is-step-4 .step-3 button,
-form.is-step-4 .step-1 button {
+.is-step-4 .step-3 button,
+.is-step-4 .step-1 button {
   display: none;
 }
 
 .orderComplete{
+  display: none;
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #00509d;
   background-color: #84a59d;
 }
 
+.orderComplete.active {
+  display: block;
+}
 .completeMessage {
   color: white;
+  font-size: 18px;
 }
 .orderImage {
   width: 30%;
